@@ -1,0 +1,154 @@
+h1 { margin: 0.5rem 0; }
+h2 { border-bottom: 1px solid #000; }
+p { margin: 0.5rem 0; }
+span { margin-right: 0.5rem; }
+button {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 10rem auto;
+}
+
+.container {
+  margin: 2rem;
+}
+
+.error {
+  background-color: #ffc9c9;
+  border: 1px solid #ff0000;
+  padding: 0.25rem;
+  margin-top: 1rem;
+}
+
+.location-section .form-container {
+  display: flex;
+}
+
+.location-section .form-container div {
+  margin-right: 1rem;
+}
+
+.result-section {
+  margin: 2rem;
+}
+
+.result-section p,
+.result-section span {
+  color: #AAA;
+}
+
+.result-section .flex {
+  display: flex;
+  align-items: center;
+}
+
+.weather-cloud,
+.weather-rain,
+.weather-clear,
+.weather-storm,
+.weather-snow,
+.weather-mist,
+.weather-default {
+  background-image: url('./assets/icons.png');
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 70px;
+  margin: 0;
+}
+
+.weather-cloud {
+  background-position: -70px -150px;
+}
+
+.weather-rain {
+  background-position: -350px -150px;
+}
+
+.weather-clear {
+  background-position: -70px -0px;
+}
+
+.weather-storm {
+  background-position: -140px -150px;
+}
+
+.weather-snow {
+  background-position: -140px -225px;
+}
+
+.weather-mist {
+  background-position: -0px -150px;
+}
+
+.weather-default {
+  background-position: -300px -1050px;
+}
+
+.history-section .empty {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0;
+}
+
+.history-section .history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-section ol {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.history-section ol > li {
+  list-style-type: decimal;
+  list-style-position: inside;
+  border-bottom: 1px solid #CCC;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.history-section ol > li:last-child {
+  border-bottom: 0px solid #CCC;
+}
+
+.history-section button {
+  all: unset;
+  padding: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.history-section button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 1rem;
+  }
+  .location-section .form-container {
+    flex-direction: column;
+  }
+  .location-section .form-container > div {
+    margin: 0.5rem 0;
+  }
+  .location-section .form-container > button {
+    margin: 0.5rem 0;
+  }
+  .result-section {
+    margin: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .history-section .history-item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
