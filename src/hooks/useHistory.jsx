@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 
-const useHistory = (key) => {
+const useHistory = () => {
+  const key = 'weather-history';
   const initialState = [];
   const historyString = localStorage.getItem(key);
   const [value, setValue] = useState(historyString ? JSON.parse(historyString) : initialState);

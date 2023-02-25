@@ -9,7 +9,7 @@ import TodayResult from './containers/TodayResult';
 import History from './containers/History';
 
 function App() {
-  const [history, setHistory] = useHistory('weather-history', []);
+  const [history, setHistory] = useHistory();
   const {
     data, isLoading, fetchData, error,
   } = useWeather();
